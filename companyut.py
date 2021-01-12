@@ -1,19 +1,8 @@
 # -*- coding: utf-8 -*-
-import unittest
-import person
 import company
-
-class PersonTestCase(unittest.TestCase):
-    # 针对Person类的测试
-    def setUp(self):
-        self.p1 = person.Person("zhang san")
-        self.p2 = person.Person("li si")
-    # 测试函数必须以 test 开头
-    def test_get_name(self):
-        # 获取名字
-        self.assertEqual(self.p1.get_name(), "zhang san")
-        self.assertEqual(self.p2.get_name(), "li si")
-
+import person
+import ut
+import unittest
 # 必须继承字unittest
 class CompanyTestCase(unittest.TestCase):
     # 装饰器
@@ -26,7 +15,7 @@ class CompanyTestCase(unittest.TestCase):
         self.kfc.staffs.clear()
 
     def test_who_is_boss(self):
-        self.assertEqual(self.kfc.who_is_boss(),"zhang sn")
+        self.assertEqual(self.kfc.who_is_boss(),"zhang san")
 
     def test_number_of_staffs_increase_when_hire_different_name_person(self):
         self.kfc.hire(person.Person("li si"))
