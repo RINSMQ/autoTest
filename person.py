@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import os
 class Person(object):
     def __init__(self,name):
